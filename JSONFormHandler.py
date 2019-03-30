@@ -38,7 +38,3 @@ def removeOrg(key):
 
 def getDictFromJSON(path):
     return json.load(open(path))
-
-if __name__ == '__main__':
-    print(addOrg(sampleInput))
-    print(removeOrg(getKey(getDictFromJSON(sampleInput))))

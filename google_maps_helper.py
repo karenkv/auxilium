@@ -1,5 +1,6 @@
 import urllib.request, urllib.parse
 import collections
+import geocoder
 from json import load
 
 class GoogleMapsHelper():
@@ -14,9 +15,6 @@ class GoogleMapsHelper():
         query_param = [('units', 'imperial'), ('origins', origin), ('destinations', dest), ('key', self.api_key)]
         return self.url_distance + '/json?' + urllib.parse.urlencode(query_param)
 
-    def build_url_dir(self, dest: str) -> str:
-        return "temp"
-
     def get_dist(self, url: str) -> dict:
         response = None
         try:
@@ -26,11 +24,16 @@ class GoogleMapsHelper():
             if response != None:
                 response.close()
 
-    def get_min(self, locations: list, origin: str) -> str:
+    def get_min(self, locations: list) -> list:
+        latlong = self.getLocation()
+        origin = str(latlong[0]) + ", " + str(latlong[1])
         distances = dict()
         for location in locations:
             url = self.build_url_dist(location, origin)
             dist = self.get_dist(url)
-            distances[location] = float(dist["rows"][0]["elements"][0]["distance"]["text"].strip(" mi"))
+            distances[location] = float(dist["rows"][0]["elements"][0]["distance"]["text"].strip(" mi").replace(",", ""))
         sorted_distances = sorted(distances.items(), key=lambda kv: kv[1])
         return sorted_distances
+
+    def getLocation(self):
+        return geocoder.ip('me').latlng
