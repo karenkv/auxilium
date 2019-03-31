@@ -11,11 +11,11 @@ twilio_object = TwilioHelper()
 google_maps_object = GoogleMapsHelper()
 json_form_object = JSONFormHandler()
 
-@app.route("/",methods=["GET"])
+@app.route("/", methods=["GET"])
 def main():
     return render_template("index.html")
 
-@app.route("/organizations",methods=["GET"])
+@app.route("/organizations", methods=["GET"])
 def organizations():
     return render_template("organizations.html")
 
@@ -43,6 +43,21 @@ def link(user_number, desire):
 def googleLinkCreator(orgName):
     return "https://www.google.com/maps/search/?api=1&" + urllib.parse.urlencode([('query',orgName)]) + "+in+los+angeles+ca"
 
+@app.route("/add-new-org", methods=["POST"])
+def add_new_org():
+    req_data = request.form
+
+    print(req_data)
+
+    # with open('org_database.json') as f:
+    #     data = json.load(f)
+
+    # data.update(req_data)
+
+    # with open('org_database.json', 'w') as f:
+    #     json.dump(data, f)
+
+    return 'done'
 
 if __name__ == '__main__':
     app.run()
