@@ -20,7 +20,19 @@ class JSONFormHandler:
             return False
         except:
             database[self.getKeyFromDictionary(jDict)] = jDict
-            with open('orgDatabase.json', 'w') as fp:
+            with open(self.databaseDictionary, 'w') as fp:
+                json.dump(database, fp)
+            return True
+
+    def addOrgByDict(self, dict):
+        jDict = dict
+        database = self.getDictFromJSON(self.databaseDictionary)
+        try:
+            temp = database[self.getKeyFromDictionary(jDict)]
+            return False
+        except:
+            database[self.getKeyFromDictionary(jDict)] = jDict
+            with open(self.databaseDictionary, 'w') as fp:
                 json.dump(database, fp)
             return True
 
@@ -36,7 +48,7 @@ class JSONFormHandler:
         try:
             org = database[key]
             del database[key]
-            with open('orgDatabase.json', 'w') as fp:
+            with open(self.databaseDictionary, 'w') as fp:
                 json.dump(database, fp)
                 return org
         except:

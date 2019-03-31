@@ -1,21 +1,22 @@
 import json
 from flask import Flask, render_template, request
-import twilio_helper
+from twilio_helper import TwilioHelper
 import session_manager
-import google_maps_helper
-import json_form_handler
+from google_maps_helper import GoogleMapsHelper
+from json_form_handler import JSONFormHandler
 import urllib.parse
+import logging
 
 app = Flask(__name__)
 twilio_object = TwilioHelper()
 google_maps_object = GoogleMapsHelper()
 json_form_object = JSONFormHandler()
 
-@app.route("/",methods=["GET"])
+@app.route("/", methods=["GET"])
 def main():
     return render_template("index.html")
 
-@app.route("/organizations",methods=["GET"])
+@app.route("/organizations", methods=["GET"])
 def organizations():
     return render_template("organizations.html")
 
@@ -43,6 +44,36 @@ def link(user_number, desire):
 def googleLinkCreator(orgName):
     return "https://www.google.com/maps/search/?api=1&" + urllib.parse.urlencode([('query',orgName)]) + "+in+los+angeles+ca"
 
+@app.route("/add-new-org", methods=["POST"])
+def add_new_org():
+    logging.basicConfig(level = logging.DEBUG)
+    req_data = request.form
+
+    dictionary = {}
+
+    dictionary = req_data.to_dict()
+
+    pd = {}
+    pd["name"] = dictionary["name"]
+    pd["website"] = dictionary["website"]
+    pd["phone"] = dictionary["phone"]
+    pd["location"] = dictionary["location"]
+
+    types = []
+    if dictionary["food"] is "Y":
+        types.append("food")
+    if dictionary["hygiene"] is "Y":
+        types.append("hygiene")
+    if dictionary["shelter"] is "Y":
+        types.append("shelter")
+
+    pd["types"] = types
+
+    json_form_object.addOrgByDict(pd)
+
+    logging.debug(json_form_object.getDictFromJSON(json_form_object.databaseDictionary))
+
+    return 'done'
 
 if __name__ == '__main__':
     app.run()
