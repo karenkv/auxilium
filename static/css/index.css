@@ -34,12 +34,12 @@
 
 h1 {
     font-family: 'SFProDisplay-Semibold';
-    font-size: 50px;
+    font-size: 90px;
 }
 
 h2 {
     font-family: 'SFProDisplay-Semibold';
-    font-size: 40px;
+    font-size: 50px;
 }
 
 h3 {
@@ -54,6 +54,7 @@ p {
 }
 
 a {
+    font-size: 25px;
     font-family: 'SFProDisplay-Medium';
     color: black;
     text-decoration: none;
@@ -99,4 +100,19 @@ body {
 #logo {
     max-height: 50px;
     padding-left: 10px;
+}
+
+#services-list {
+    padding-top: 15px;
+    padding-left: 100px;
+}
+
+#chevron {
+    height: 30px;
+    width: auto;
+}
+
+#about-desc {
+    font-size: 30px;
+    font-family: 'SFProDisplay-Regular';
 }

@@ -8,7 +8,12 @@
     <link href="../static/css/bootstrap-grid.css" rel="stylesheet">
     <link href="../static/css/bootstrap.css" rel="stylesheet">
     <link href="../static/css/index.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj*lyTjo7mOUStjsKC4p0pQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery.js"></script>
+    <script src="../static/js/jquery-1.11.0.js"></script>
     <script src="../static/js/bootstrap.bundle.js"></script>
+    <script src="../static/js/index.js"></script>
+
 </head>
 
 <body>
@@ -40,7 +45,7 @@
                 <div class="col col-md-1"></div>
                 <div class="col col-md-11">
                     <div class="container d-flex d-inline-block justify-content-center align-items-center">
-                        <h1>This is auxilium.</h1>
+                        <h1 class="top-lines">This is auxilium.</h1>
                         <img src="../static/img/ear.svg" id="ear-padding" />
                     </div>
                 </div>
@@ -59,7 +64,7 @@
                         <h3>You ask</h3>
                         <hr class="background-gradient" />
                         <div class="text-left">
-                            <p>Use auxilium to streamline the search for resources you need.</p>
+                            <p>Use Auxilium to streamline the search for resources you need.</p>
                         </div>
                     </div>
                 </div>
@@ -84,6 +89,32 @@
                     </div>
                 </div>
                 <div class="col col-md-3"></div>
+            </div>
+
+            <div class="row" id="chevron">
+                <div class="col col-lg-12">
+                    <button type="button" class="btn btn custom-chevron" > <i class="fa fa-chevron-down fa-5x"></i> </button>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="container-fluid h-100 w-100 d-flex justify-content-center align-items-center" id="about">
+        <div class="row">
+            <div class="col col-md-2"></div>
+            <div class="col col-md-8">
+                <h2>What's Auxilium?</h2>
+                <br />
+                <div id="about-desc">
+                    Auxilium sources local and international organizations to provide relevant services in:
+                    <ul id="services-list">
+                        <li>Food</li>
+                        <li>Hygiene</li>
+                        <li>Shelter</li>
+                    </ul>
+                    to the homeless based in Los Angeles.
+                </div>
             </div>
         </div>
     </div>
