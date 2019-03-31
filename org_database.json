@@ -13,7 +13,7 @@
 		"name": "Midnight Mission",
 		"location": "13252 happyville avenue"
 	},
-	  "Monday Night Mission 13252 happyville avenue": {
+	"Monday Night Mission 13252 happyville avenue": {
 		"types": ["shelter"],
 		"website": "https://www.yes.org",
 		"phone": "123-456-7890",
@@ -34,7 +34,7 @@
 		"name": "Downtown Women's Center",
 		"location": "13252 happyville avenue"
 	},
-	  "Union Rescue Mission 13252 happyville avenue": {
+	"Union Rescue Mission 13252 happyville avenue": {
 		"types": ["shelter"],
 		"website": "https://www.yes.org",
 		"phone": "123-456-7890",
