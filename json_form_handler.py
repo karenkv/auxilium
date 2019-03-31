@@ -52,5 +52,5 @@ class JSONFormHandler:
         for value in values:
             types = value["types"]
             if ty in types:
-                validOrgs.append((value["name"], value["location"]));
+                validOrgs.append(value["name"]);
         return validOrgs
