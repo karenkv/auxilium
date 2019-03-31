@@ -11,6 +11,7 @@
     <script src="https://code.jquery.com/jquery.js"></script>
     <script src="../static/js/jquery-1.11.0.js"></script>
     <script src="../static/js/bootstrap.bundle.js"></script>
+    <script src="../static/js/organizations.js"></script>
 </head>
 
 <body>
@@ -47,32 +48,32 @@
                 <div class="row">
                     <form class="container w-50">
                         <div class="form-group">
-                            <input type="text" class="form-control w-100" placeholder="Organization Name">
+                            <input type="text" class="form-control w-100" id="org-name" placeholder="Organization Name">
                             <label class="form-check-label" id="type-label">Type of Organization:</label>
                             <div class="form-check form-check-inline">
                                 <input class="form-check-input" type="checkbox" id="food-check" value="option1">
                                 <label class="form-check-label" for="food-check">Food</label>
                             </div>
                             <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="checkbox" id="hygiene-check" value="option3">
+                                <label class="form-check-label" for="hygiene-check">Hygiene</label>
+                            </div>
+                            <div class="form-check form-check-inline">
                                 <input class="form-check-input" type="checkbox" id="shelter-check" value="option2">
                                 <label class="form-check-label" for="shelter-check">Shelter</label>
                             </div>
-                            <div class="form-check form-check-inline">
-                                <input class="form-check-input" type="checkbox" id="hygiene" value="option3">
-                                <label class="form-check-label" for="hygiene">Hygiene</label>
-                            </div>
                         </div>
                         <div class="form-group">
-                            <input type="text" class="form-control w-100" id="inputAddress" placeholder="1234 Main St">
+                            <input type="text" class="form-control w-100" id="address" placeholder="1234 Main St">
                         </div>
                         <div class="form-group">
-                            <input type="number" class="form-control w-100" id="phoneNumber" placeholder="1234567890">
+                            <input type="number" class="form-control w-100" id="phone-number" placeholder="1234567890">
                         </div>
                         <div class="form-group">
-                            <input type="text" class="form-control w-100" placeholder="https://www.example.com">
+                            <input type="text" class="form-control w-100" id="website" placeholder="https://www.example.com">
                         </div>
                         <div class="d-flex justify-content-center">
-                            <button type="submit" class="btn btn-dark w-50" id="submit-btn">Submit</button>
+                            <button type="button" class="btn btn-dark w-50" id="submit-btn">Submit</button>
                         </div>
                     </form>
                 </div>
