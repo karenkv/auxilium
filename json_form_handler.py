@@ -2,8 +2,8 @@ import json
 
 class JSONFormHandler:
     def __init__(self):
-        self.databaseDictionary = "orgDatabase.json"
-        self.sampleInput = "sampleInput.json"
+        self.databaseDictionary = "org_database.json"
+        self.sampleInput = "sample_input.json"
 
     def getKeyFromDictionary(self, orgDict):
         return orgDict["name"] + " " + orgDict["location"]
@@ -12,8 +12,8 @@ class JSONFormHandler:
         dictionary = self.getDictFromJSON(path)
         return self.getKeyFromDictionary(dictionary)
 
-    def addOrg(self, form):
-        jDict = self.getDictFromJSON(form)
+    def addOrg(self, path):
+        jDict = self.getDictFromJSON(path)
         database = self.getDictFromJSON(self.databaseDictionary)
         try:
             temp = database[self.getKeyFromDictionary(jDict)]
