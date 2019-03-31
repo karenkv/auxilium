@@ -9,7 +9,7 @@ def main():
 
 @app.route("/organizations",methods=["GET"])
 def organizations():
-    return render_template("organization.html")
+    return render_template("organizations.html")
 
 if __name__ == '__main__':
     app.run()

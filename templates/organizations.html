@@ -7,7 +7,7 @@
 
     <link href="../static/css/bootstrap-grid.css" rel="stylesheet">
     <link href="../static/css/bootstrap.css" rel="stylesheet">
-    <link href="../static/css/index.css" rel="stylesheet" type="text/css">
+    <link href="../static/css/organization.css" rel="stylesheet" type="text/css">
     <script src="https://code.jquery.com/jquery.js"></script>
     <script src="../static/js/jquery-1.11.0.js"></script>
     <script src="../static/js/bootstrap.bundle.js"></script>
@@ -36,7 +36,49 @@
         </div>
     </nav>
 
-    
+    <body>
+        <div class="container-fluid h-100 w-100 d-flex justify-content-center align-items-center">
+            <div class="grid w-100">
+                <div class="row text-center">
+                    <div class="col col-md-12">
+                        <h1 id="register-padding">Register your Organization</h1>
+                    </div>
+                </div>
+                <div class="row">
+                    <form class="container w-50">
+                        <div class="form-group">
+                            <input type="text" class="form-control w-100" placeholder="Organization Name">
+                            <label class="form-check-label" id="type-label">Type of Organization:</label>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="checkbox" id="food-check" value="option1">
+                                <label class="form-check-label" for="food-check">Food</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="checkbox" id="shelter-check" value="option2">
+                                <label class="form-check-label" for="shelter-check">Shelter</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="checkbox" id="hygiene" value="option3">
+                                <label class="form-check-label" for="hygiene">Hygiene</label>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" class="form-control w-100" id="inputAddress" placeholder="1234 Main St">
+                        </div>
+                        <div class="form-group">
+                            <input type="number" class="form-control w-100" id="phoneNumber" placeholder="1234567890">
+                        </div>
+                        <div class="form-group">
+                            <input type="text" class="form-control w-100" placeholder="https://www.example.com">
+                        </div>
+                        <div class="d-flex justify-content-center">
+                            <button type="submit" class="btn btn-dark w-50" id="submit-btn">Submit</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </body>
 </body>
 
 </html>
