@@ -76,18 +76,18 @@
 		"name": "Los Angeles Youth Network",
 		"location": "13252 happyville avenue"
 	},
-"New Directions Oasis 13252 happyville avenue": {
+"New Directions 13252 happyville avenue": {
 		"types": ["shelter"],
 		"website": "https://www.yes.org",
 		"phone": "123-456-7890",
-		"name": "New Directions Oasis",
+		"name": "New Directions",
 		"location": "13252 happyville avenue"
 	},
-"Friends Helping Friends LA Transitional Housing 13252 happyville avenue": {
+"Friends Helping Friends LA 13252 happyville avenue": {
 		"types": ["shelter"],
 		"website": "https://www.yes.org",
 		"phone": "123-456-7890",
-		"name": "Friends Helping Friends LA Transitional Housing",
+		"name": "Friends Helping Friends LA",
 		"location": "13252 happyville avenue"
 	},
 "Jenesse Center 13252 happyville avenue": {
@@ -153,11 +153,11 @@
 		"name": "Food Forward",
 		"location": "1940 Pico Blvd"
 	},
-"PATH Los Angeles 2346 Cotner Ave": {
+"People Assisting The Homeless Los Angeles 2346 Cotner Ave": {
 		"types": ["shelter","hygiene","food"],
 		"website": "https://www.yes.org",
 		"phone": "123-456-7890",
-		"name": "PATH Los Angeles",
+		"name": "People Assisting The Homeless Los Angeles",
 		"location": "2346 Cotner Ave"
 	},
 	"Bicycle Kitchen 1940 Pico Blvd": {
