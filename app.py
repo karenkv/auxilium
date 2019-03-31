@@ -36,17 +36,10 @@ def link(user_number, desire):
         response = "The closest organizations around you are:"
         for org in closestOrgs:
             mapsLink = googleLinkCreator(org[0])
-<<<<<<< HEAD
             response += "\n\n" + org[0] + "\n" + "Google Maps Direction: " + mapsLink + "\n" + str(org[1]) + " mi away."
         response += "\n\nPlease send 1 to continue services or 2 to end the session."
         session_manager.setState(user_number, 3)
         return twilio_object.text_user(response, user_number)
-=======
-            response += "\n" + org[0] + "\n" + "Google Maps: " + mapsLink + "\n" + org[1] + " mi away."
-        response += "Please send 1 to continue services or 2 to end the session."
-        twilio_object.text_user(response, user_number)
-        session_manager.setState(user_number, 3)
->>>>>>> fb083410c174c7915b3b0910256dd540c35aebe0
 
 def googleLinkCreator(orgName):
     return "https://www.google.com/maps/search/?api=1&" + urllib.parse.urlencode([('query',orgName)]) + "+in+los+angeles+ca"

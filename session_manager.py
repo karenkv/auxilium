@@ -49,13 +49,8 @@ def setDesire(pNumber, desire):
 def deleteSession(pNumber):
     dictionary = getDatabase()
     del dictionary[pNumber]
-<<<<<<< HEAD
     with open(database, 'w') as fp:
         json.dump(dictionary, fp)
-=======
-    with open(self.database, 'w') as fp:
-        json.dump(database, fp)
->>>>>>> fb083410c174c7915b3b0910256dd540c35aebe0
 
 def getSession(pNumber):
     dictionary = getDatabase()
