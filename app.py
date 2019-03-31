@@ -39,7 +39,8 @@ def link(user_number, desire):
             response += "\n\n" + org[0] + "\n" + "Google Maps Direction: " + mapsLink + "\n" + str(org[1]) + " mi away."
         response += "\n\nPlease send 1 to continue services or 2 to end the session."
         session_manager.setState(user_number, 3)
-        return twilio_object.text_user(response, user_number)
+        twilio_object.text_user(response, user_number)
+        return render_template("index.html")
 
 def googleLinkCreator(orgName):
     return "https://www.google.com/maps/search/?api=1&" + urllib.parse.urlencode([('query',orgName)]) + "+in+los+angeles+ca"
