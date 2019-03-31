@@ -48,6 +48,11 @@ $(document).ready(() => {
                  "phone": phoneNumber,
                  "name": orgName,
                  "location": address
+        }, function(data) {
+            if(data === 'done') {
+                console.log('hello');
+                $('#confirmation-modal').show();
+            }
         });
     });
 

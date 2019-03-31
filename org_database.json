@@ -1,177 +1,235 @@
 {
-	"Los Angeles Regional Food Bank 1734 E 41st St": {
-		"types": ["food"],
-		"website": "https://www.lafoodbank.org/",
-		"phone": "(323) 234-3030",
-		"name": "Los Angeles Regional Food Bank",
-		"location": "1734 E 41st St"
-	},
-	"Food on Foot 1625 Schrader Blvd": {
-		"types": ["food"],
-		"website": "https://www.foodonfoot.org/",
-		"phone": "(310) 442-0088",
-		"name": "Food on Foot",
-		"location": "1625 Schrader Blvd"
-	},
-	"Project Angel Food 922 Vine St": {
-		"types": ["food"],
-		"website": "https://www.angelfood.org/",
-		"phone": "(323) 845-1800",
-		"name": "Project Angel Food",
-		"location": "922 Vine St"
-	},
-	"Midnight Mission 601 San Pedro St": {
-		"types": ["shelter", "hygiene"],
-		"website": "https://www.midnightmission.org/",
-		"phone": "(213) 624-9258",
-		"name": "Midnight Mission",
-		"location": "601 San Pedro St"
-	},
-	"Monday Night Mission 13252 happyville avenue": {
-		"types": ["shelter"],
-		"website": "https://www.yes.org",
-		"phone": "123-456-7890",
-		"name": "Monday Night Mission",
-		"location": "13252 happyville avenue"
-	},
-	"Dress For Success WorldWide-West 13252 happyville avenue": {
-		"types": ["hygiene"],
-		"website": "https://www.yes.org",
-		"phone": "123-456-7890",
-		"name": "Dress For Success WorldWide-West",
-		"location": "13252 happyville avenue"
-	},
-	"Downtown Women's Center 13252 happyville avenue": {
-		"types": ["shelter","hygiene"],
-		"website": "https://www.yes.org",
-		"phone": "123-456-7890",
-		"name": "Downtown Women's Center",
-		"location": "13252 happyville avenue"
-	},
-	"Union Rescue Mission 13252 happyville avenue": {
-		"types": ["shelter"],
-		"website": "https://www.yes.org",
-		"phone": "123-456-7890",
-		"name": "Union Rescue Mission",
-		"location": "13252 happyville avenue"
-	},
-	"The Giving Spirit 13252 happyville avenue": {
-		"types": ["shelter"],
-		"website": "https://www.yes.org",
-		"phone": "123-456-7890",
-		"name": "The Giving Spirit",
-		"location": "13252 happyville avenue"
-	},
-	"Harvest Home 13252 happyville avenue": {
-		"types": ["shelter"],
-		"website": "https://www.yes.org",
-		"phone": "123-456-7890",
-		"name": "Harvest Home",
-		"location": "13252 happyville avenue"
-	},
-	"Los Angeles Youth Network 13252 happyville avenue": {
-		"types": ["shelter"],
-		"website": "https://www.yes.org",
-		"phone": "123-456-7890",
-		"name": "Los Angeles Youth Network",
-		"location": "13252 happyville avenue"
-	},
-"New Directions 13252 happyville avenue": {
-		"types": ["shelter"],
-		"website": "https://www.yes.org",
-		"phone": "123-456-7890",
-		"name": "New Directions",
-		"location": "13252 happyville avenue"
-	},
-"Friends Helping Friends LA 13252 happyville avenue": {
-		"types": ["shelter"],
-		"website": "https://www.yes.org",
-		"phone": "123-456-7890",
-		"name": "Friends Helping Friends LA",
-		"location": "13252 happyville avenue"
-	},
-"Jenesse Center 13252 happyville avenue": {
-		"types": ["shelter"],
-		"website": "https://www.yes.org",
-		"phone": "123-456-7890",
-		"name": "Jenesse Center",
-		"location": "13252 happyville avenue"
-	},
-"Family Promise of the Verdugos 13252 happyville avenue": {
-		"types": ["shelter","food"],
-		"website": "https://www.yes.org",
-		"phone": "123-456-7890",
-		"name": "Family Promise of the Verdugos",
-		"location": "13252 happyville avenue"
-	},
-"Hope for Homeless Youth 13252 happyville avenue": {
-		"types": ["shelter"],
-		"website": "https://www.yes.org",
-		"phone": "123-456-7890",
-		"name": "Hope for Homeless Youth",
-		"location": "13252 happyville avenue"
-	},
-"Angel’s Flight Youth Shelter 13252 happyville avenue": {
-		"types": ["shelter"],
-		"website": "https://www.yes.org",
-		"phone": "123-456-7890",
-		"name": "Angel’s Flight Youth Shelter",
-		"location": "13252 happyville avenue"
-	},
-"Good Shepherd Center for Homeless Women 13252 happyville avenue": {
-		"types": ["shelter","hygiene","food"],
-		"website": "https://www.yes.org",
-		"phone": "123-456-7890",
-		"name": "Good Shepherd Center for Homeless Women",
-		"location": "13252 happyville avenue"
-	},
-"Ella’s Foundation Homeless Services 13252 happyville avenue": {
-		"types": ["shelter"],
-		"website": "https://www.yes.org",
-		"phone": "123-456-7890",
-		"name": "Ella’s Foundation Homeless Services",
-		"location": "13252 happyville avenue"
-	},
-"Zahn Memorial Center 13252 happyville avenue": {
-		"types": ["shelter"],
-		"website": "https://www.yes.org",
-		"phone": "123-456-7890",
-		"name": "Zahn Memorial Center",
-		"location": "13252 happyville avenue"
-	},
-"The Salvation Army 1940 Pico Blvd": {
-		"types": ["shelter","hygiene"],
-		"website": "https://www.yes.org",
-		"phone": "123-456-7890",
-		"name": "The Salvation Army",
-		"location": "1940 Pico Blvd"
-	},
-	"Food Forward 1940 Pico Blvd": {
-		"types": ["food"],
-		"website": "https://www.yes.org",
-		"phone": "123-456-7890",
-		"name": "Food Forward",
-		"location": "1940 Pico Blvd"
-	},
-"People Assisting The Homeless Los Angeles 2346 Cotner Ave": {
-		"types": ["shelter","hygiene","food"],
-		"website": "https://www.yes.org",
-		"phone": "123-456-7890",
-		"name": "People Assisting The Homeless Los Angeles",
-		"location": "2346 Cotner Ave"
-	},
-	"Bicycle Kitchen 1940 Pico Blvd": {
-		"types": ["food"],
-		"website": "https://www.yes.org",
-		"phone": "123-456-7890",
-		"name": "Bicycle Kitchen",
-		"location": "1940 Pico Blvd"
-	},
-	"Beacon for him Ministries 1940 Pico Blvd": {
-		"types": ["food"],
-		"website": "https://www.yes.org",
-		"phone": "123-456-7890",
-		"name": "Beacon for him Ministries",
-		"location": "1940 Pico Blvd"
-	}
+    "Los Angeles Regional Food Bank 1734 E 41st St": {
+        "types": [
+            "food"
+        ],
+        "website": "https://www.lafoodbank.org/",
+        "phone": "(323) 234-3030",
+        "name": "Los Angeles Regional Food Bank",
+        "location": "1734 E 41st St"
+    },
+    "Food on Foot 1625 Schrader Blvd": {
+        "types": [
+            "food"
+        ],
+        "website": "https://www.foodonfoot.org/",
+        "phone": "(310) 442-0088",
+        "name": "Food on Foot",
+        "location": "1625 Schrader Blvd"
+    },
+    "Project Angel Food 922 Vine St": {
+        "types": [
+            "food"
+        ],
+        "website": "https://www.angelfood.org/",
+        "phone": "(323) 845-1800",
+        "name": "Project Angel Food",
+        "location": "922 Vine St"
+    },
+    "Midnight Mission 601 San Pedro St": {
+        "types": [
+            "shelter",
+            "hygiene"
+        ],
+        "website": "https://www.midnightmission.org/",
+        "phone": "(213) 624-9258",
+        "name": "Midnight Mission",
+        "location": "601 San Pedro St"
+    },
+    "Monday Night Mission 13252 happyville avenue": {
+        "types": [
+            "shelter"
+        ],
+        "website": "https://www.yes.org",
+        "phone": "123-456-7890",
+        "name": "Monday Night Mission",
+        "location": "13252 happyville avenue"
+    },
+    "Dress For Success WorldWide-West 13252 happyville avenue": {
+        "types": [
+            "hygiene"
+        ],
+        "website": "https://www.yes.org",
+        "phone": "123-456-7890",
+        "name": "Dress For Success WorldWide-West",
+        "location": "13252 happyville avenue"
+    },
+    "Downtown Women's Center 13252 happyville avenue": {
+        "types": [
+            "shelter",
+            "hygiene"
+        ],
+        "website": "https://www.yes.org",
+        "phone": "123-456-7890",
+        "name": "Downtown Women's Center",
+        "location": "13252 happyville avenue"
+    },
+    "Union Rescue Mission 13252 happyville avenue": {
+        "types": [
+            "shelter"
+        ],
+        "website": "https://www.yes.org",
+        "phone": "123-456-7890",
+        "name": "Union Rescue Mission",
+        "location": "13252 happyville avenue"
+    },
+    "The Giving Spirit 13252 happyville avenue": {
+        "types": [
+            "shelter"
+        ],
+        "website": "https://www.yes.org",
+        "phone": "123-456-7890",
+        "name": "The Giving Spirit",
+        "location": "13252 happyville avenue"
+    },
+    "Harvest Home 13252 happyville avenue": {
+        "types": [
+            "shelter"
+        ],
+        "website": "https://www.yes.org",
+        "phone": "123-456-7890",
+        "name": "Harvest Home",
+        "location": "13252 happyville avenue"
+    },
+    "Los Angeles Youth Network 13252 happyville avenue": {
+        "types": [
+            "shelter"
+        ],
+        "website": "https://www.yes.org",
+        "phone": "123-456-7890",
+        "name": "Los Angeles Youth Network",
+        "location": "13252 happyville avenue"
+    },
+    "New Directions 13252 happyville avenue": {
+        "types": [
+            "shelter"
+        ],
+        "website": "https://www.yes.org",
+        "phone": "123-456-7890",
+        "name": "New Directions",
+        "location": "13252 happyville avenue"
+    },
+    "Friends Helping Friends LA 13252 happyville avenue": {
+        "types": [
+            "shelter"
+        ],
+        "website": "https://www.yes.org",
+        "phone": "123-456-7890",
+        "name": "Friends Helping Friends LA",
+        "location": "13252 happyville avenue"
+    },
+    "Jenesse Center 13252 happyville avenue": {
+        "types": [
+            "shelter"
+        ],
+        "website": "https://www.yes.org",
+        "phone": "123-456-7890",
+        "name": "Jenesse Center",
+        "location": "13252 happyville avenue"
+    },
+    "Family Promise of the Verdugos 13252 happyville avenue": {
+        "types": [
+            "shelter",
+            "food"
+        ],
+        "website": "https://www.yes.org",
+        "phone": "123-456-7890",
+        "name": "Family Promise of the Verdugos",
+        "location": "13252 happyville avenue"
+    },
+    "Hope for Homeless Youth 13252 happyville avenue": {
+        "types": [
+            "shelter"
+        ],
+        "website": "https://www.yes.org",
+        "phone": "123-456-7890",
+        "name": "Hope for Homeless Youth",
+        "location": "13252 happyville avenue"
+    },
+    "Angel\u2019s Flight Youth Shelter 13252 happyville avenue": {
+        "types": [
+            "shelter"
+        ],
+        "website": "https://www.yes.org",
+        "phone": "123-456-7890",
+        "name": "Angel\u2019s Flight Youth Shelter",
+        "location": "13252 happyville avenue"
+    },
+    "Good Shepherd Center for Homeless Women 13252 happyville avenue": {
+        "types": [
+            "shelter",
+            "hygiene",
+            "food"
+        ],
+        "website": "https://www.yes.org",
+        "phone": "123-456-7890",
+        "name": "Good Shepherd Center for Homeless Women",
+        "location": "13252 happyville avenue"
+    },
+    "Ella\u2019s Foundation Homeless Services 13252 happyville avenue": {
+        "types": [
+            "shelter"
+        ],
+        "website": "https://www.yes.org",
+        "phone": "123-456-7890",
+        "name": "Ella\u2019s Foundation Homeless Services",
+        "location": "13252 happyville avenue"
+    },
+    "Zahn Memorial Center 13252 happyville avenue": {
+        "types": [
+            "shelter"
+        ],
+        "website": "https://www.yes.org",
+        "phone": "123-456-7890",
+        "name": "Zahn Memorial Center",
+        "location": "13252 happyville avenue"
+    },
+    "The Salvation Army 1940 Pico Blvd": {
+        "types": [
+            "shelter",
+            "hygiene"
+        ],
+        "website": "https://www.yes.org",
+        "phone": "123-456-7890",
+        "name": "The Salvation Army",
+        "location": "1940 Pico Blvd"
+    },
+    "Food Forward 1940 Pico Blvd": {
+        "types": [
+            "food"
+        ],
+        "website": "https://www.yes.org",
+        "phone": "123-456-7890",
+        "name": "Food Forward",
+        "location": "1940 Pico Blvd"
+    },
+    "People Assisting The Homeless Los Angeles 2346 Cotner Ave": {
+        "types": [
+            "shelter",
+            "hygiene",
+            "food"
+        ],
+        "website": "https://www.yes.org",
+        "phone": "123-456-7890",
+        "name": "People Assisting The Homeless Los Angeles",
+        "location": "2346 Cotner Ave"
+    },
+    "Bicycle Kitchen 1940 Pico Blvd": {
+        "types": [
+            "food"
+        ],
+        "website": "https://www.yes.org",
+        "phone": "123-456-7890",
+        "name": "Bicycle Kitchen",
+        "location": "1940 Pico Blvd"
+    },
+    "Beacon for him Ministries 1940 Pico Blvd": {
+        "types": [
+            "food"
+        ],
+        "website": "https://www.yes.org",
+        "phone": "123-456-7890",
+        "name": "Beacon for him Ministries",
+        "location": "1940 Pico Blvd"
+    }
 }
