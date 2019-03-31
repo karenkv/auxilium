@@ -1,9 +1,9 @@
 import json
 from flask import Flask, render_template, request
-from twilio_helper import TwilioHelper
+import twilio_helper
 import session_manager
-from google_maps_helper import GoogleMapsHelper
-from json_form_handler import JSONFormHandler
+import google_maps_helper
+import json_form_handler
 import urllib.parse
 
 app = Flask(__name__)
@@ -35,8 +35,10 @@ def link(user_number, desire):
         response = "The closest organizations for x around you are:"
         for org in closestOrgs:
             mapsLink = googleLinkCreator(org[0])
-            response += "\n" + org[0] + "\n" + "Google Maps Direction: " + mapsLink + "\n" + org[1] + " mi away."
+            response += "\n" + org[0] + "\n" + "Google Maps: " + mapsLink + "\n" + org[1] + " mi away."
+        response += "Please send 1 to continue services or 2 to end the session."
         twilio_object.text_user(response, user_number)
+        session_manager.setState(user_number, 3)
 
 def googleLinkCreator(orgName):
     return "https://www.google.com/maps/search/?api=1&" + urllib.parse.urlencode([('query',orgName)]) + "+in+los+angeles+ca"
