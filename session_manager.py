@@ -9,7 +9,7 @@ def createSession(pNumber):
         return False
     except:
         session = {}
-        session["State"] = 0
+        session["state"] = 0
         session["ip"] = ""
         session["desire"] = ""
 
@@ -49,8 +49,8 @@ def setDesire(pNumber, desire):
 def deleteSession(pNumber):
     dictionary = getDatabase()
     del dictionary[pNumber]
-    with open('orgDatabase.json', 'w') as fp:
-        json.dump(database, fp)
+    with open(database, 'w') as fp:
+        json.dump(dictionary, fp)
 
 def getSession(pNumber):
     dictionary = getDatabase()
