@@ -2,6 +2,50 @@ from json import load
 from twilio.rest import Client
 from twilio.twiml.messaging_response import MessagingResponse
 import os
+import json_form_handler
+import session_manager
+
+#CREATE EXTRA STATE FOR WAITING FOR LOCATION RESPONSE
+
+def buildLocationLink(pNumber, desire):
+    d = "shelter"
+    if desire is 2:
+        d = "food"
+    elif desire is 3:
+        d = "hygiene"
+    return "https://herokuapp.auxilium.com/sms/" + pNumber + "/" + d;
+
+def state0Response():
+    return "Welcome! What service are you looking for? \nPlease reply with ONE of the following numbers: \n1. Shelter\n2. Food\n3. Hygiene"
+
+def state1Response(pNumber, userResponse):
+    response = "Please click the following link to confirm location-based services:\n"
+    if userResponse is "1" or userResponse.toLower() is "shelter":
+        response += buildLocationLink(pNumber, 1)
+    elif userResponse is "2" or userResponse.toLower() is "food":
+        response += buildLocationLink(pNumber, 2)
+    elif userResponse is "3" or userResponse.toLower() is "hygiene":
+        response += buildLocationLink(pNumber, 3)
+    else:
+        return "Error, please send 1 for shelter, 2 for food, or 3 for hygiene."
+    response += "Please wait after clicking link. Do not send messages while Auxilium is calculating organizations near you. Send STOP to end the session."
+    return response
+
+def state2Response(pNumber, userResponse):
+    if userResponse.toUpper() is "STOP":
+        session_manager.deleteSession(pNumber)
+        return "Thank you for using Auxilium's services! We are now ending this session. Please message again to start a new session."
+    else:
+        return "Sorry, due to data constraints we can only send out 1 link at a time. Please wait while Auxilium is calculating organizations near you."
+
+def state3Response(pNumber, userResponse):
+    if userResponse is "1":
+        session_manager.setState(pNumber, 0)
+        return state0Response()
+    elif userResponse is "2":
+        session_manager.deleteSession(pNumber)
+        return "Thank you for using Auxilium's services! We are now ending this session. Please message again to start a new session."
+    return "Error, please send 1 to continue services or 2 to end the session."
 
 class TwilioHelper():
     def __init__(self):
@@ -15,36 +59,37 @@ class TwilioHelper():
         self.client = Client(self.account_sid, self.auth_token)
         self.twilio_number = creds["twilio"]["number"]
 
-    def message_response(self, incoming_msg) -> (str, str):
+    def message_response(self, incoming_msg) -> None:
         '''
         Handles messaging response from client. Takes an incoming message and returns tuple with user's number and service requested,
         unless incoming message is hello/bye/invalid.
         '''
+        user_number = get_user_number()
+        session = session_manager.getSession(user_number)
+        if session is None:
+            session_manager.createSession(user_number)
+            session = session_manager.getSession(user_number)
+
+        state = session["state"]
+
         resp = MessagingResponse()
-        incoming_msg.toLower()
-        if(incoming_msg == "Hello"):
-            resp.message("Welcome! What service are you looking for? \nPlease reply with ONE of the following: \n1. Shelter\n2. Food\n3. Personal Hygiene")
-        elif(incoming_msg == "Bye"):
-            resp.message("Good luck!")
+        if state is 0:
+            resp.message(state0Response())
+        elif state is 1:
+            resp.message(state1Response(user_number, incoming_msg))
+        elif state is 2:
+            resp.message(state2Response(user_number, incoming_msg))
+        elif state is 3:
+            resp.message(state3Response(user_number, incoming_msg))
         else:
-            if(incoming_msg == "Shelter"):
-                resp.message("Please follow this link to confirm location-based services: \n")
-            elif(incoming_msg == "Food"):
-                resp.message("Please follow this link to confirm location-based services: \n")
-            elif(incoming_msg == "Personal Hygiene"):
-                resp.message("Please follow this link to confirm location-based services: \n")
-            else:
-                resp.message("Invalid response. Please try again.")
-                return ("", "")
-            user_number = get_user_number()
-            return (user_number, incoming_msg)
-        return ("", "")
+            resp.message("Error: Session is now closing.")
+            session_manager.deleteSession(user_number)
 
     def get_user_number(self) -> str:
         '''
         Gets user number from client messages list.
         '''
-        return str(client.messages.list(to = self.twilio_number)[0].from_)
+        return str(self.client.messages.list(to = self.twilio_number)[0].from_)
 
     def text_user(self, message: str, user_number: str) -> None:
         '''
