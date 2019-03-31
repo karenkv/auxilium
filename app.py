@@ -1,10 +1,11 @@
 import json
 from flask import Flask, render_template, request
-import twilio_helper
+from twilio_helper import TwilioHelper
 import session_manager
-import google_maps_helper
-import json_form_handler
+from google_maps_helper import GoogleMapsHelper
+from json_form_handler import JSONFormHandler
 import urllib.parse
+import logging
 
 app = Flask(__name__)
 twilio_object = TwilioHelper()
@@ -45,17 +46,32 @@ def googleLinkCreator(orgName):
 
 @app.route("/add-new-org", methods=["POST"])
 def add_new_org():
+    logging.basicConfig(level = logging.DEBUG)
     req_data = request.form
 
-    print(req_data)
+    dictionary = {}
 
-    # with open('org_database.json') as f:
-    #     data = json.load(f)
+    dictionary = req_data.to_dict()
 
-    # data.update(req_data)
+    pd = {}
+    pd["name"] = dictionary["name"]
+    pd["website"] = dictionary["website"]
+    pd["phone"] = dictionary["phone"]
+    pd["location"] = dictionary["location"]
 
-    # with open('org_database.json', 'w') as f:
-    #     json.dump(data, f)
+    types = []
+    if dictionary["food"] is "Y":
+        types.append("food")
+    if dictionary["hygiene"] is "Y":
+        types.append("hygiene")
+    if dictionary["shelter"] is "Y":
+        types.append("shelter")
+
+    pd["types"] = types
+
+    json_form_object.addOrgByDict(pd)
+
+    logging.debug(json_form_object.getDictFromJSON(json_form_object.databaseDictionary))
 
     return 'done'
 

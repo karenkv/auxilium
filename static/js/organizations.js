@@ -9,22 +9,26 @@ $(document).ready(() => {
         const phoneNumber = $('#phone-number').val().trim();
         const website = $('#website').val().trim();
 
-        const typesArray = []
+        let isFood = "N"
         if(foodChecked == true) {
-            typesArray.push('food');
+            isFood = "Y"
         }
-
+		
+		let isHygiene = "N"
         if(hygieneChecked == true) {
-            typesArray.push('hygiene');
+            isHygiene = "Y"
         }
 
+		isShelter = "N"
         if(shelterChecked == true) {
-            typesArray.push('shelter');
+            isShelter = "Y"
         }
 
-        const newOrg = {
+        let newOrg = {
             [orgName]: {
-                "types": typesArray,
+                "food": isFood,
+				"hygiene": isHygiene,
+				"shelter": isShelter,
                 "website": website,
                 "phone": phoneNumber,
                 "name": orgName,
@@ -37,7 +41,9 @@ $(document).ready(() => {
         // i literally don't know what to do
         
         $.post('/add-new-org', {
-                 "types": typesArray,
+                 "food": isFood,
+				 "hygiene": isHygiene,
+				 "shelter": isShelter,
                  "website": website,
                  "phone": phoneNumber,
                  "name": orgName,
