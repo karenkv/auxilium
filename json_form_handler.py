@@ -45,12 +45,12 @@ class JSONFormHandler:
     def getDictFromJSON(self, path):
         return json.load(open(path))
 
-    def findByType(self, type):
+    def findByType(self, ty):
         dictionary = self.getDictFromJSON(self.databaseDictionary)
         values = dictionary.values()
         validOrgs = []
         for value in values:
-            types = value["Types"]
-            if type in types:
-                validOrgs.append((value["name"], value["location"]));
+            types = value["types"]
+            if ty in types:
+                validOrgs.append(value["name"]);
         return validOrgs

@@ -1,1 +1,44 @@
-{"Example org 13252 happyville avenue": {"Types": ["Shelter", "Hygiene", "Food"], "website": "https://www.yes.org", "phone": "123-456-7890", "name": "Example org", "location": "13252 happyville avenue"}}
+{
+	"Los Angeles Regional Food Bank 13252 happyville avenue": {
+		"types": ["food"],
+		"website": "https://www.yes.org",
+		"phone": "123-456-7890",
+		"name": "Los Angeles Regional Food Bank",
+		"location": "13252 happyville avenue"
+	},
+	"Midnight Mission 13252 happyville avenue": {
+		"types": ["shelter"],
+		"website": "https://www.yes.org",
+		"phone": "123-456-7890",
+		"name": "Midnight Mission",
+		"location": "13252 happyville avenue"
+	},
+	  "Monday Night Mission 13252 happyville avenue": {
+		"types": ["shelter"],
+		"website": "https://www.yes.org",
+		"phone": "123-456-7890",
+		"name": "Monday Night Mission",
+		"location": "13252 happyville avenue"
+	},
+	"People Assisting the Homeless 13252 happyville avenue": {
+		"types": ["shelter"],
+		"website": "https://www.yes.org",
+		"phone": "123-456-7890",
+		"name": "People Assisting the Homeless",
+		"location": "13252 happyville avenue"
+	},
+	"Downtown Women's Center 13252 happyville avenue": {
+		"types": ["shelter", "food"],
+		"website": "https://www.yes.org",
+		"phone": "123-456-7890",
+		"name": "Downtown Women's Center",
+		"location": "13252 happyville avenue"
+	},
+	  "Union Rescue Mission 13252 happyville avenue": {
+		"types": ["shelter"],
+		"website": "https://www.yes.org",
+		"phone": "123-456-7890",
+		"name": "Union Rescue Mission",
+		"location": "13252 happyville avenue"
+	}
+}

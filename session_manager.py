@@ -52,5 +52,12 @@ def deleteSession(pNumber):
     with open('orgDatabase.json', 'w') as fp:
         json.dump(database, fp)
 
+def getSession(pNumber):
+    dictionary = getDatabase()
+    try:
+        return dictionary[pNumber]
+    except:
+        return None
+
 def getDatabase():
     return json.load(open(database))
