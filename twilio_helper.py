@@ -13,7 +13,7 @@ def buildLocationLink(pNumber, desire):
         d = "food"
     elif desire is 3:
         d = "hygiene"
-    return "http://7fff87d2.ngrok.io/sms/" + pNumber + "/" + d;
+    return "http://f90b1050.ngrok.io/sms/" + pNumber + "/" + d;
 
 def state0Response():
     return "Welcome to Auxilium! What service are you looking for? \nPlease reply with ONE of the following numbers: \n1. Shelter\n2. Food\n3. Hygiene"
@@ -28,7 +28,7 @@ def state1Response(pNumber, userResponse):
         response += buildLocationLink(pNumber, 3)
     else:
         return "Error, please send 1 for shelter, 2 for food, or 3 for hygiene."
-    response += "\nPlease wait after clicking link. Do not send messages while Auxilium is calculating organizations near you. Send STOP to end the session."
+    response += "\nPlease wait after clicking link. Do not send messages while Auxilium is calculating organizations near you. Send BYE to end the session."
     return response
 
 def state2Response(pNumber, userResponse):
@@ -40,7 +40,7 @@ def state2Response(pNumber, userResponse):
 
 def state3Response(pNumber, userResponse):
     if userResponse is "1":
-        session_manager.setState(pNumber, 0)
+        session_manager.setState(pNumber, 1)
         return state0Response()
     elif userResponse is "2":
         session_manager.deleteSession(pNumber)

@@ -40,9 +40,12 @@ class GoogleMapsHelper():
         origin = str(latlong[0]) + ", " + str(latlong[1])
         distances = dict()
         for location in locations:
-            url = self.build_url_dist(location, origin)
-            dist = self.get_dist(url)
-            distances[location] = float(dist["rows"][0]["elements"][0]["distance"]["text"].strip(" mi").replace(",", ""))
+            try:
+                url = self.build_url_dist(location, origin)
+                dist = self.get_dist(url)
+                distances[location] = float(dist["rows"][0]["elements"][0]["distance"]["text"].strip(" mi").replace(",", ""))
+            except:
+                pass
         sorted_distances = sorted(distances.items(), key=lambda kv: kv[1])
         if(sorted_distances is None):
             return None
