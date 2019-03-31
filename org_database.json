@@ -139,13 +139,6 @@
 		"name": "Zahn Memorial Center",
 		"location": "13252 happyville avenue"
 	},
-"Goodwill Southern California Donation Center 10350 W Olympic Blvd": {
-		"types": ["hygiene"],
-		"website": "https://www.yes.org",
-		"phone": "123-456-7890",
-		"name": "Goodwill Southern California Donation Center",
-		"location": "10350 W Olympic Blvd"
-	},
 "The Salvation Army 1940 Pico Blvd": {
 		"types": ["shelter","hygiene"],
 		"website": "https://www.yes.org",

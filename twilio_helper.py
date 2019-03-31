@@ -16,7 +16,7 @@ def buildLocationLink(pNumber, desire):
     return "http://f90b1050.ngrok.io/sms/" + pNumber + "/" + d;
 
 def state0Response():
-    return "Welcome to Auxilium! What service are you looking for? \nPlease reply with ONE of the following numbers: \n1. Shelter\n2. Food\n3. Hygiene"
+    return "Welcome to Auxilium! What service are you looking for? \n\nPlease reply with ONE of the following numbers: \n1. Shelter\n2. Food\n3. Hygiene"
 
 def state1Response(pNumber, userResponse):
     response = "Please click the following link to confirm location-based services:\n"
@@ -28,7 +28,7 @@ def state1Response(pNumber, userResponse):
         response += buildLocationLink(pNumber, 3)
     else:
         return "Error, please send 1 for shelter, 2 for food, or 3 for hygiene."
-    response += "\nPlease wait after clicking link. Do not send messages while Auxilium is calculating organizations near you. Send BYE to end the session."
+    response += "\n\nPlease wait after clicking link. Do not send messages while Auxilium is calculating organizations near you. \n\nSend BYE to end the session."
     return response
 
 def state2Response(pNumber, userResponse):
