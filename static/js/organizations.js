@@ -36,13 +36,13 @@ $(document).ready(() => {
 
         // i literally don't know what to do
         
-        // $.post('/add-new-org', {
-        //         "types": typesArray,
-        //         "website": website,
-        //         "phone": phoneNumber,
-        //         "name": orgName,
-        //         "location": address
-        // });
+        $.post('/add-new-org', {
+                 "types": typesArray,
+                 "website": website,
+                 "phone": phoneNumber,
+                 "name": orgName,
+                 "location": address
+        });
     });
 
 });
