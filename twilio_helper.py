@@ -13,7 +13,7 @@ def buildLocationLink(pNumber, desire):
         d = "food"
     elif desire is 3:
         d = "hygiene"
-    return "https://herokuapp.auxilium.com/sms/" + pNumber + "/" + d;
+    return "https://herokuapp.auxilium-lahacks.com/sms/" + pNumber + "/" + d;
 
 def state0Response():
     return "Welcome! What service are you looking for? \nPlease reply with ONE of the following numbers: \n1. Shelter\n2. Food\n3. Hygiene"
