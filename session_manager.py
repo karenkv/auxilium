@@ -9,12 +9,12 @@ def createSession(pNumber):
         return False
     except:
         session = {}
-        session["State"] = 0
+        session["state"] = 0
         session["ip"] = ""
         session["desire"] = ""
 
         dictionary[pNumber] = session
-        with open('sessions_database.json', 'w') as fp:
+        with open(self.database, 'w') as fp:
             json.dump(dictionary, fp)
         return True
 
@@ -29,27 +29,27 @@ def setState(pNumber, state):
     dictionary = getDatabase()
     session = dictionary[pNumber]
     session["state"] = state
-    with open('sessions_database.json', 'w') as fp:
+    with open(self.database, 'w') as fp:
         json.dump(dictionary, fp)
 
 def setIP(pNumber, ip):
     dictionary = getDatabase()
     session = dictionary[pNumber]
     session["ip"] = ip
-    with open('sessions_database.json', 'w') as fp:
+    with open(self.database, 'w') as fp:
         json.dump(dictionary, fp)
 
 def setDesire(pNumber, desire):
     dictionary = getDatabase()
     session = dictionary[pNumber]
     session["desire"] = desire
-    with open('sessions_database.json', 'w') as fp:
+    with open(self.database, 'w') as fp:
         json.dump(dictionary, fp)
 
 def deleteSession(pNumber):
     dictionary = getDatabase()
     del dictionary[pNumber]
-    with open('orgDatabase.json', 'w') as fp:
+    with open(self.database, 'w') as fp:
         json.dump(database, fp)
 
 def getSession(pNumber):
