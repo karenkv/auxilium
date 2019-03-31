@@ -19,7 +19,6 @@ def main():
 def organizations():
     return render_template("organizations.html")
 
-'''
 @app.route("/sms", methods=["POST"])
 def sms():
     body = request.values.get('Body', None)
@@ -38,7 +37,6 @@ def link(user_number, desire):
             mapsLink = googleLinkCreator(org[0])
             response += "\n" + org[0] + "\n" + "Google Maps Direction: " + mapsLink + "\n" + org[1] + " mi away."
         twilio_object.text_user(response, user_number)
-'''
 
 def googleLinkCreator(orgName):
     return "https://www.google.com/maps/search/?api=1&" + urllib.parse.urlencode([('query',orgName)]) + "+in+los+angeles+ca"
