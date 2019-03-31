@@ -14,7 +14,7 @@ def createSession(pNumber):
         session["desire"] = ""
 
         dictionary[pNumber] = session
-        with open(self.database, 'w') as fp:
+        with open(database, 'w') as fp:
             json.dump(dictionary, fp)
         return True
 
@@ -29,21 +29,21 @@ def setState(pNumber, state):
     dictionary = getDatabase()
     session = dictionary[pNumber]
     session["state"] = state
-    with open(self.database, 'w') as fp:
+    with open(database, 'w') as fp:
         json.dump(dictionary, fp)
 
 def setIP(pNumber, ip):
     dictionary = getDatabase()
     session = dictionary[pNumber]
     session["ip"] = ip
-    with open(self.database, 'w') as fp:
+    with open(database, 'w') as fp:
         json.dump(dictionary, fp)
 
 def setDesire(pNumber, desire):
     dictionary = getDatabase()
     session = dictionary[pNumber]
     session["desire"] = desire
-    with open(self.database, 'w') as fp:
+    with open(database, 'w') as fp:
         json.dump(dictionary, fp)
 
 def deleteSession(pNumber):

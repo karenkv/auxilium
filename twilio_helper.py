@@ -13,10 +13,10 @@ def buildLocationLink(pNumber, desire):
         d = "food"
     elif desire is 3:
         d = "hygiene"
-    return "http://af291f57.ngrok.io/sms/" + pNumber + "/" + d;
+    return "http://7fff87d2.ngrok.io/sms/" + pNumber + "/" + d;
 
 def state0Response():
-    return "Welcome! What service are you looking for? \nPlease reply with ONE of the following numbers: \n1. Shelter\n2. Food\n3. Hygiene"
+    return "Welcome to Auxilium! What service are you looking for? \nPlease reply with ONE of the following numbers: \n1. Shelter\n2. Food\n3. Hygiene"
 
 def state1Response(pNumber, userResponse):
     response = "Please click the following link to confirm location-based services:\n"
