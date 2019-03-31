@@ -1,0 +1,102 @@
+@font-face {
+    font-family: 'SFProDisplay-Regular';
+    src: url('../fonts/SFProDisplay-Regular.ttf');
+}
+
+@font-face {
+    font-family: 'SFProDisplay-Medium';
+    src: url('../fonts/SFProDisplay-Medium.ttf');
+}
+
+@font-face {
+    font-family: 'SFProDisplay-Semibold';
+    src: url('../fonts/SFProDisplay-SemiBold.ttf');
+}
+
+@font-face {
+    font-family: 'SFProDisplay-Bold';
+    src: url('../fonts/SFProDisplay-Bold.ttf');
+}
+
+.background-gradient {
+    background-image: linear-gradient(90deg, #ffd366, #f76b3f);
+    height: 3px;
+    border-radius: 1.5px;
+}
+
+#question-mark {
+    max-height: 100px;
+}
+
+#speech-bubble, #lightbulb {
+    max-height: 100px;
+}
+
+h1 {
+    font-family: 'SFProDisplay-Semibold';
+    font-size: 50px;
+}
+
+h2 {
+    font-family: 'SFProDisplay-Semibold';
+    font-size: 40px;
+}
+
+h3 {
+    font-family: 'SFProDisplay-Bold';
+    font-size: 25px;
+    padding-top: 5px;
+}
+
+p {
+    font-family: 'SFProDisplay-Medium';
+    font-size: 15px;
+}
+
+a {
+    font-family: 'SFProDisplay-Medium';
+    color: black;
+    text-decoration: none;
+}
+
+a:hover {
+     color: darkblue; 
+     text-decoration: none; 
+     cursor: pointer;
+}
+
+html, body {
+    height: 100%;
+    width: 100%;
+}
+
+body {
+    padding-top: 30px;
+}
+
+#bottom {
+    padding-top: 50px;
+}
+
+#ear-padding {
+    position: relative;
+    top: -20px;
+    left: -20px;
+    max-height: 100px;
+    width: auto;
+}
+
+#row-up {
+    position: relative;
+    top: -30px;
+}
+
+#phone-number {
+    position: relative;
+    top: 35px;
+}
+
+#logo {
+    max-height: 50px;
+    padding-left: 10px;
+}
